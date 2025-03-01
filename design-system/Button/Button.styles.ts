@@ -86,13 +86,10 @@ export const getButtonViewStyle =
         case "link":
         case "text":
           style.backgroundColor = "transparent";
-          // Put back when we're done refactoring all the variant="text" button
-          // if (pressed) {
-          //   style.backgroundColor = colors.fill.minimal;
-          // }
-          // Temporary opacity change for the variant="text" button
+          // For link and text variants, we want a visual feedback when pressed
+          // but without changing opacity
           if (pressed) {
-            style.opacity = 0.8;
+            style.backgroundColor = colors.fill.minimal;
           }
           break;
 
